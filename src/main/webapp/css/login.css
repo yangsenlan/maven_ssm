@@ -1,0 +1,105 @@
+			#biglogin {
+				width: 1024px;
+				height: 500px;
+				background: url(../img/6702.png);
+				margin: 0px auto;
+			}
+			#left,
+			#right {
+				float: left;
+				height: 500px;
+			}
+			
+			#left {
+				width: 650px;
+			}
+			
+			#right {
+				width: 294px;
+				height: 400px;
+				padding: 50px 40px;
+			}
+			
+			#right_info {
+				height: 360px;
+				width: 234px;
+				background: white;
+				padding: 20px 30px;
+				border-radius:10px ;
+			}
+			
+			.row {
+				height: 40px;
+				line-height: 40px;
+			}
+			#row {
+				margin-top: 50px;
+				color: #3C3C3C;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			
+			#row2 input,
+			#row1 input {
+				border: 1px solid #CBCBCB;
+				width: 180px;
+				height: 30px;
+				padding-left: 10px;
+				float: left;
+			}
+			#row1 span,#row2 span{
+				display: inline-block;
+				width: 40px;
+				height: 30px;
+				float: left;
+			}
+			#row1 img,#row2 img{
+				width: 30px;
+				height: 30px;
+			}
+			#row3 {
+				font-size: 12px;
+				color: #A94442;
+			}
+			
+			#row4 {
+				font-size: 12px;
+				color: #999;
+			}
+			
+			#row4 span {
+				display: inline-block;
+				width: 117px;
+			}
+			#row4 a{
+				color:#999;
+				text-decoration: none;
+			}
+			#row4 a:hover{
+				color: #C40000;
+			}
+			#row4 #span2 {
+				text-align: right;
+			}
+			#row5{
+				text-align: center;
+				height: 50px;
+				line-height: 75px;
+			}
+			#row5 input {
+				color: white;
+				background-color: #C40000;
+				font-size: 14px;
+				font-weight: bold;
+				width: 200px;
+				height: 40px;
+				border: 0px;
+				border-radius:10px ;
+			}
+			#checkpass{
+			    display: inline-block;
+   				margin-top: 14px;
+    			float: left;
+    			margin-right: 17px;
+    			margin-left: 10px;
+			}

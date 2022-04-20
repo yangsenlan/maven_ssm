@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.oracle.ssm.mapper.GoodsMapper" >
+  <resultMap id="BaseResultMap" type="com.oracle.ssm.model.Goods" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="good_name" property="goodName" jdbcType="VARCHAR" />
+    <result column="good_price" property="goodPrice" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
+    <result column="good_desc" property="goodDesc" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  
+  
+  <resultMap id="GoodsMap" type="com.oracle.ssm.vo.GoodsShowVo" >
+  <result property="avaliableCount" column="avaliable_count"/>
+   <association property="goods" javaType="goods">
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="good_name" property="goodName" jdbcType="VARCHAR" />
+    <result column="good_price" property="goodPrice" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
+    <result column="good_desc" property="goodDesc" jdbcType="VARCHAR" />
+    </association>
+    
+  </resultMap>
+  
+  
+  
+  
+  
+  
+  
+  <sql id="Base_Column_List" >
+    id, good_name, good_price, update_time, img_url, good_desc
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from goods
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from goods
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.oracle.ssm.model.Goods" >
+    insert into goods (id, good_name, good_price, 
+      update_time, img_url, good_desc
+      )
+    values (#{id,jdbcType=INTEGER}, #{goodName,jdbcType=VARCHAR}, #{goodPrice,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{imgUrl,jdbcType=VARCHAR}, #{goodDesc,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.oracle.ssm.model.Goods" >
+    insert into goods
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="goodName != null" >
+        good_name,
+      </if>
+      <if test="goodPrice != null" >
+        good_price,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="imgUrl != null" >
+        img_url,
+      </if>
+      <if test="goodDesc != null" >
+        good_desc,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="goodName != null" >
+        #{goodName,jdbcType=VARCHAR},
+      </if>
+      <if test="goodPrice != null" >
+        #{goodPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imgUrl != null" >
+        #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="goodDesc != null" >
+        #{goodDesc,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.oracle.ssm.model.Goods" >
+    update goods
+    <set >
+      <if test="goodName != null" >
+        good_name = #{goodName,jdbcType=VARCHAR},
+      </if>
+      <if test="goodPrice != null" >
+        good_price = #{goodPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="imgUrl != null" >
+        img_url = #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="goodDesc != null" >
+        good_desc = #{goodDesc,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.oracle.ssm.model.Goods" >
+    update goods
+    set good_name = #{goodName,jdbcType=VARCHAR},
+      good_price = #{goodPrice,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      img_url = #{imgUrl,jdbcType=VARCHAR},
+      good_desc = #{goodDesc,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="findGoodsByQueryVo" parameterType="goodsQueryVo" resultMap="GoodsMap">
+  select goods.*,goods_store.avaliable_count from goods,goods_store
+  <where>
+  goods.id = goods_store.goods_id
+  <if test="goodsName!=null and goodsName!=''">
+  and good_name like '%${goodsName}%'
+  
+  </if>
+  
+  <if test="minPrice!=null and minPrice!=''">
+  and good_price &gt;= ${minPrice}  
+  </if>
+  
+  <if test="maxPrice!=null and maxPrice!=''">
+  and good_price &lt;= ${maxPrice}  
+  </if>
+  </where>
+  order by update_time desc
+  
+  </select>
+</mapper>

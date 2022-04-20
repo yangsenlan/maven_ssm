@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 该文件是Mybatis的核心配置文件 -->
+
+<configuration>
+	<!-- 指定包下面的实体类，别名为小写 -->
+	<typeAliases>
+		<package name="com.oracle.ssm.mapper"/>
+		<package name="com.oracle.ssm.model" />
+<!--		<package name="com.oracle.ssm.vo" />-->
+	</typeAliases>
+</configuration>

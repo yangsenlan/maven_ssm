@@ -1,0 +1,54 @@
+			.gouwubig{width: 1024px;margin: 0px auto;}
+			.gouwutable{width: 1024px;font-size: 12px;color: #999999;}
+			.deleteall{font-size: 12px;color: white;background:#999999;border: none;height: 25px;width: 63px;border-radius:5px;margin: 0px 5px;}
+			.gouwutitle{text-align: right;}
+			.prodImg{width: 80px;height: 80px;}
+			.prodRow{height: 121px;}
+			.prodtitle{height: 57px;}
+			.gouwutable td{padding: 20px;height: 17px;}
+			.prodcol1{width: 110px;}
+			.prodcol2{width: 390px;}
+			.prodcol3{width: 68px;}
+			.prodcol4{width: 85px;}
+			.prodcol5{width: 80px;}
+			.prodcol6{width: 40px;}
+			.prodRow .prodcol2 a{vertical-align: top;text-decoration: none;color: #666666;font-weight: bold;}
+			.prodRow .prodcol2 a:hover{color: #C40000;}
+			.prodRow .prodcol2 img{margin-top: 45px;vertical-align: middle;margin-left: 5px;}
+			.prodRow .prodcol3 span{font-weight: bold;}
+			.prodRow .prodcol3 .yuanjia{text-decoration: line-through;}
+			.prodRow .prodcol3 .xianjia{color: #C40000;}
+			.prodRow .prodcol5{color: #C40000;font-weight: bold;font-size: 14px;}
+			.prodRow .prodcol6 a{text-decoration: none;color: #999999;}
+			.prodRow .prodcol6 a:hover{color: #C40000;}
+			.checkprod{float: left;margin-top: 35px;}
+			.checkAll{float: left;}
+			.prodRow td{border-top:solid 1px #999999;border-bottom:solid 1px #999999;}
+			.prodRow .prodcol1{border-left:solid 1px #999999;}
+			.prodRow .prodcol6{border-right:solid 1px #999999;}
+			.gouwunum{width: 20px;height: 19px;}
+			.gouwufuhao{width: 18px;height: 23px;border: solid 1px #666666;display: inline-block;text-align: center;line-height: 23px;}
+			.gouwufuhao:hover{cursor: pointer;color: black;}
+			.jiesuan{background-color: #E5E5E5;line-height: 50px;margin: 20px 0px;color: black;padding-left: 20px;font-size: 12px;height: 50px;width: 1004px;}
+			.qunxuan{float: left;margin-top: 20px;}
+			.jiesuanRight{display: inline-block;float: right;}
+			.jiesuanButton{height: 50px;width:120px;border: none;font-size: 20px;color: white;}
+			.prodPrice{color: #C40000;font-size: 20px;font-weight: bold;}
+			.prodzong{font-weight: bold;font-size: 16px;color: #C40000;}
+			.tuijian{width: 1024px;}
+			#tuijianTItle{width: 1024px;height: 30px;background: mistyrose;border-top-left-radius:15px;border-top-right-radius:15px;}
+			#tuijianTItle span{font-size: 12px;color: #666666;line-height: 30px;margin-left: 20px;font-weight: bold;}
+			#tuijianInfo{width: 1022px;border: solid 1px mistyrose;height: 200px;}
+			.tuijianInfoLeft{width: 492px;border-right:dotted 1px #666666;height: 160px;margin-top: 20px;padding-left:20px;}
+			.tuijianInfoRight{width: 489px;height: 160px;margin-top: 20px;padding-left:20px;}
+			.tuijianInfoLeft,.tuijianInfoRight{float: left;}
+			.tuijianInfoLeft li,.tuijianInfoRight li{float: left;margin: 0px 5px; list-style: none;color: #666666;font-size: 12px;}
+			.prodInfo{margin: 0px;padding: 0px;height: 40px;margin: 5px 0px;}
+			.prodName{width: 60%;}
+			.prodName a{color: #999999;font-weight: bold;text-decoration: none;}
+			.prodName a:hover{color: #C40000;}
+			.prodyuanjia{width: 10%;text-decoration: line-through;}
+			.prodxianjia{width: 10%;color: #C40000 !important;}
+			.prodBuy{margin-left: 15px !important;}
+			.prodBuy a{text-decoration: none;color: black;}
+			.prodBuy a:hover{color: #C40000;font-weight: bold;}
